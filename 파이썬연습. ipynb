@@ -1,0 +1,166 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled8.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOBooVb5PWjSXDhRA+RMqX+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/spacemaninSeoul/justpractice/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%97%B0%EC%8A%B5.%20ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MU2kpNOfCZ_7",
+        "outputId": "ceb44b45-ac56-43fc-ff69-50d3eaaf42f9"
+      },
+      "source": [
+        "'''\n",
+        "try:\n",
+        "    예외가 발생할 가능성이 있는 코드\n",
+        "except:\n",
+        "    예외가 발생했을 때 실행할 코드\n",
+        "else:\n",
+        "    예외가 발생하지 않았을 때 실행할 코드\n",
+        "'''\n",
+        "\n",
+        "#try except else\n",
+        "try:\n",
+        "  #숫자 변환\n",
+        "  number_input_a = int(input(\"정수 입력> \"))\n",
+        "except:\n",
+        "  print(\"정수를 입력하지 않았습니다.\")\n",
+        "else:\n",
+        "  #출력\n",
+        "  print(\"원의 반지름:\", number_input_a)\n",
+        "  "
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "정수 입력> 12\n",
+            "원의 반지름: 12\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 151
+        },
+        "id": "9AHCFBeoDa07",
+        "outputId": "edb423bf-b34e-4897-af97-48918eac13ea"
+      },
+      "source": [
+        "#finally 구문\n",
+        "'''\n",
+        "try:\n",
+        "  예외가 발생할 가능성이 있는 코드\n",
+        "except:\n",
+        "  예외가 발생했을 때 실행할 코드\n",
+        "else:\n",
+        "  예외가 발생하지 않았을 때 실행할 코드\n",
+        "finally:\n",
+        "  무조건 실행할 코드"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-2-327031f02dfb>\"\u001b[0;36m, line \u001b[0;32m10\u001b[0m\n\u001b[0;31m    무조건 실행할 코드\u001b[0m\n\u001b[0m              \n^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m EOF while scanning triple-quoted string literal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "27xDQr8KUzUB",
+        "outputId": "df18b79f-033e-42d0-bdbe-2375a27aee84"
+      },
+      "source": [
+        "#예외 구분하기\n",
+        "#변수 선언\n",
+        "list_number = [52, 273, 32, 72, 100]\n",
+        "try:\n",
+        "  number_input = int(input(\"정수 입력> \"))\n",
+        "  #리스트 요소 출력\n",
+        "  print(\"{}번째 요소: {}\".format(number_input, list_number[number_input]))\n",
+        "except ValueError:\n",
+        "  #ValueError 발생시\n",
+        "  print(\"정수를 입력해 주세요!\")\n",
+        "except IndexError:\n",
+        "  #IndexError가 발생하는 경우\n",
+        "  print(\"리스트의 인덱스를 벗어났어요!\")"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "정수 입력> 10\n",
+            "리스트의 인덱스를 벗어났어요!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "LWkS_aURXCIi"
+      },
+      "source": [
+        "#raise 키워드 : 예외를 강제로 발생시키는 기능\n",
+        "#raise 예외 객체"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "-CJaLjsbXAdC"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
